@@ -20,7 +20,9 @@ var (
 	rootCmd = &cobra.Command{
 		Use:   "sweeper",
 		Short: "Not yet sure what this is",
-		Long:  `Not yet sure what this is.`,
+		Long: `Not yet sure what this is.
+
+[version=` + version + `, commit=` + commit + `]`,
 		PersistentPreRun: func(cmd *cobra.Command, args []string) {
 			goflag.Parse() // for cobra + glog flags
 		},
